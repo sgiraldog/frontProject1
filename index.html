@@ -3,37 +3,188 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./styles/main.css">
 
 </head>
 
 <body>
-    <header>
-        <h1>Header</h1>
+    <header class="main-header">
+        <div class="main-header__content">
+            <h1 class="main-header__title">Genius Web & Talos Inc.</h1>
+            <p class="main-header__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a id="main-header__learn-more" href="#services">LEARN MORE</a>
+            <a id="main-header__contact" href="#contact">CONTACT US</a>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+    <nav class="main-nav">
+        <h1>Talos</h1>
+        <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="#services">Services</a></li>
+            <li class="main-nav__item"><a href="#about">About</a></li>
+            <li class="main-nav__item"><a href="#team">Team</a></li>
+            <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
+            <li class="main-nav__item"><a href="#blog">Blog</a></li>
+            <li class="main-nav__item"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main>
+        <section id="services">
+            <h1 class="section-title">What we do</h1>
+            <p class="section-desctiption">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <ul class="services__list">
+                <li class="services__list-item">
+                    <div class="fs1" aria-hidden="true" data-icon="&#xe001;"></div>
+                    <div id="services__list-item__description">
+                        <h2>Brand Identity</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="services__list-item">
+                    <div class="fs1" aria-hidden="true" data-icon="&#xe01b;"></div>
+                    <div id="services__list-item__description">
+                        <h2>Web Design</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="services__list-item">
+                    <div class="fs1" aria-hidden="true" data-icon="&#xe04b;"></div>
+                    <div id="services__list-item__description">
+                        <h2>Social Marketing</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="services__list-item">
+                    <div class="fs1" aria-hidden="true" data-icon="&#xe027;"></div>
+                    <div id="services__list-item__description">
+                        <h2>CMS & eCommerce</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="about">
+            <h1 class="section-title">Genius Studio</h1>
+            <p class="section-desctiption">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="about__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/Dv7gLpW91DM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><video src="https://www.youtube.com/watch?v=Dv7gLpW91DM"></video>
+            </div>
+        </section>
+
+        <section id="team">
+            <h1 class="section-title section-title-centered">Team</h1>
+            <p class="section-desctiption section-description-centered">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <div class="team__list">
+                <article class="team__member">
+                    <img class="team__member-img" src="./images/team_1.jpg">
+                    <h3 class="team__member-name">Johnathan Doe</h3>
+                    <p class="team__member-role">Designer</p>
+                </article>
+                <article class="team__member">
+                    <img class="team__member-img" src="./images/team_2.jpg">
+                    <h3 class="team__member-name">Jenny L Martian</h3>
+                    <p class="team__member-role">UX Designer</p>
+                </article>
+                <article class="team__member">
+                    <img class="team__member-img" src="./images/team_3.jpg">
+                    <h3 class="team__member-name">James David Doe</h3>
+                    <p class="team__member-role">Creative Director</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h1 class="section-title section-title-centered">Latest Work</h1>
+            <p class="section-desctiption section-description-centered">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+        </section>
+
+        <section id="blog">
+            <h1 class="section-title section-title-centered">Out Blog</h1>
+            <p class="section-desctiption section-description-centered">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+        </section>
+
+        <section id="questions">
+            <h1 class="section-title section-title-centered">Asked Questions</h1>
+            <p class="section-desctiption section-description-centered">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+        </section>
+
+        <section id="testimonial">
+            <h1 class="section-title section-title-centered">Testimonial Words</h1>
+            <p class="section-desctiption section-description-centered">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h1 class="section-title section-title-centered">Get In Touch</h1>
+            <p class="section-desctiption section-description-centered">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+
+            <form action="submit">
+                <input type="text" name="name" id="contact__name" placeholder="Name">
+                <input type="email" name="email" id="contact__email" placeholder="Email">
+                <input type="number" name="name" id="contact__phone" placeholder="Phone">
+                <textarea name="message" id="contact__message" rows="10" placeholder="Message"></textarea>
+            </form>
+        </section>
+
 
     </main>
 
 
 
-    <footer>
-        <p>Talos Footer</p>
+    <footer class="main-footer">
+        <p>Copyright Talos Inc HTML Template | All Rights Reserved.</p>
+        <ul class="main-footer__items">
+            <li class="main-footer__item">
+                <a href="#"></a>
+            </li>
+            <li class="main-footer__item">
+                <a href="#"></a>
+            </li>
+            <li class="main-footer__item">
+                <a href="#"></a>
+            </li>
+            <li class="main-footer__item">
+                <a href="#"></a>
+            </li>
+            <li class="main-footer__item">
+                <a href="#"></a>
+            </li>
+            <li class="main-footer__item">
+                <a href="#"></a>
+            </li>
+        </ul>
     </footer>
-
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
