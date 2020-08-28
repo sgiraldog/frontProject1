@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 @font-face {
     font-family: 'et-line';
     src: url('../fonts/et-line.eot');
     src: url('../fonts/et-line.eot?#iefix') format('embedded-opentype'), url('../fonts/et-line.woff') format('woff'), url('../fonts/et-line.ttf') format('truetype'), url('../fonts/et-line.svg#et-line') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 [data-icon]:before {
@@ -26,120 +31,134 @@
     /*--highlight-color: #ff1b68;*/
 }
 
-* {
-    box-sizing: border-box;
-}
-
 html {
     height: 100%;
 }
 
 body {
-    font-family: "et-line", "Lato", sans-serif;
+    font-family: "et-line", "PT Sans", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.main-header {
+.main-banner {
     background: url("../images/home-bg.jpg") center/cover no-repeat border-box;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     margin: 0;
     padding: 0;
     transition: background-image 1s ease-in-out;
 }
 
-.main-header__content {
+.main-banner__content {
     display: inline-block;
-    margin: 35vh 20vw;
+    margin: 8vh 5vw;
     text-align: center;
     color: white;
 }
 
-.main-header__title {
-    font-size: 2.5rem;
+.main-banner__title {
+    font-size: 2rem;
 }
 
-.main-header__description {
+.main-banner__description {
     font-family: sans-serif;
     font-size: 1.1rem;
 }
 
-.main-header a {
+.main-banner a {
     display: inline-block;
     text-decoration: none;
     color: white;
+    font-family: "Lato", sans-serif;
     padding: 10px 30px;
     margin: 30px 10px;
     border-radius: 4px;
     font-size: 0.8rem;
+    font-weight: bold;
 }
 
-#main-header__learn-more {
+#main-banner__learn-more {
     border: 2px solid white;
 }
 
-#main-header__contact {
+#main-banner__contact {
+    display: none;
     border: 2px solid var(--light-green);
     background-color: var(--light-green);
 }
 
-.main-header a:hover,
-#main-header__contact:hover {
+.main-banner a:hover,
+#main-banner__contact:hover {
     color: var(--light-green);
     background-color: white;
     border: 2px solid white;
 }
 
-#main-header__contact:focus,
-#main-header__contact:active {
+#main-banner__contact:focus,
+#main-banner__contact:active {
     color: white;
     border: 2px solid var(--orangish);
     background-color: var(--orangish);
 }
 
-.main-nav {
+.main-header__buttons {
     display: flex;
+    border-bottom: 0.5px solid #ebebeb;
 }
+
+.main-header__buttons h2 {
+    display: inline-block;
+    font-weight: 510;
+    font-size: 1.7rem;
+    letter-spacing: 0.7px;
+    margin: 0.5rem 1rem;
+    color: gray;
+}
+
+.toggle-button {
+    width: 2.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    margin-left: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__bar {
+    width: 85%;
+    height: 0.1rem;
+    background: var(--light-green);
+    display: block;
+    margin: 0.4rem 0;
+}
+
+.main-header {
+    overflow: hidden;
+}
+
+.main-nav {}
 
 .main-nav__items {
-    margin: 0;
-    padding: 0;
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
-.main-nav__item {
-    margin: 0 1rem;
-}
-
-.main-nav__item a,
-.mobile-nav__item a {
+.main-nav__item a {
+    font-family: "Lato", sans-serif;
     text-decoration: none;
-    color: var(--dark-green);
-    font-weight: bold;
-    padding: 0.2rem 0;
-}
-
-.main-nav__item a:hover,
-.main-nav__item a:active {
-    color: white;
-    border-bottom: 5px solid white;
-}
-
-.main-nav__item--cta a,
-.mobile-nav__item--cta a {
-    color: white;
-    background: var(--highlight-color);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-}
-
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active,
-.mobile-nav__item--cta a:hover,
-.mobile-nav__item--cta a:active {
-    color: var(--highlight-color);
-    background: white;
-    border: none;
+    color: gray;
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
