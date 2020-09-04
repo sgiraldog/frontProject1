@@ -61,10 +61,12 @@ body {
 }
 
 #main-banner__learn-more {
+    letter-spacing: 0.05rem;
     border: 2px solid white;
 }
 
 #main-banner__contact {
+    letter-spacing: 0.05rem;
     display: none;
 }
 
@@ -104,11 +106,14 @@ body {
 }
 
 @media(min-width: 800px) {
+    .main-banner__title {
+        font-size: 3.2rem;
+    }
     .main-banner {
         height: 100vh;
     }
     .main-banner__content {
-        padding: 5rem;
+        max-width: 70%;
     }
 }
 
@@ -138,11 +143,7 @@ body {
     font-size: 1.7rem;
     letter-spacing: 0.7px;
     margin: 0.5rem 1rem;
-    color: gray;
-}
-
-.main-header__buttons h2:hover {
-    color: var(--light-green);
+    color: black;
 }
 
 .toggle-button {
@@ -241,7 +242,7 @@ body {
 
 @media(min-width: 800px) {
     .main-header__buttons h2 {
-        padding-left: 5rem;
+        padding-left: 8rem;
     }
     .main-nav__items {
         margin-right: 5rem;
@@ -251,7 +252,7 @@ body {
 .section-title {
     width: 100%;
     margin: 0;
-    font-size: 1.8rem
+    font-size: 2rem
 }
 
 .section-description {
@@ -269,7 +270,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
 }
 
 .services .section-title,
@@ -298,9 +299,14 @@ body {
     color: gray;
 }
 
+.highlighted {
+    color: var(--light-green);
+}
+
 .services__list-item h2 {
     margin: 0;
     padding: 1rem;
+    padding-left: 0;
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -315,7 +321,7 @@ body {
 
 @media(min-width: 550px) {
     .services {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
     .services__list {
         grid-template-columns: auto auto;
@@ -335,7 +341,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     text-align: left;
     background: var(--gray-background);
 }
@@ -357,7 +363,7 @@ body {
 
 @media(min-width: 550px) {
     .about {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
 }
 
@@ -386,7 +392,11 @@ body {
     align-items: center;
     padding: 0;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
+}
+
+.team .section-title {
+    margin-top: 2rem;
 }
 
 .team .section-description {
@@ -455,7 +465,7 @@ body {
 
 @media(min-width: 550px) {
     .team {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
     .team__member {
         padding: 0 1rem;
@@ -482,7 +492,7 @@ body {
 
 .portfolio {
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     background: var(--gray-background);
 }
 
@@ -538,7 +548,7 @@ body {
 
 @media(min-width: 550px) {
     .portfolio {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
     .portfolio__list {
         grid-template-columns: auto auto;
@@ -564,7 +574,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
 }
 
 .blog__list {
@@ -603,8 +613,12 @@ body {
 .blog__item:hover,
 .blog__item:active {
     background: url("../images/hover-image.jpg") top left/cover no-repeat;
-    color: var(--light-green);
     animation: blog 15s linear infinite;
+}
+
+.blog__item:hover h1,
+.blog__item:active h1 {
+    color: var(--light-green);
 }
 
 @keyframes blog {
@@ -618,7 +632,7 @@ body {
 
 @media(min-width: 550px) {
     .blog {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
     .blog__list {
         grid-template-columns: repeat(2, auto);
@@ -652,7 +666,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     background: var(--gray-background);
 }
 
@@ -703,7 +717,7 @@ body {
 
 @media(min-width: 550px) {
     .questions {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
 }
 
@@ -797,7 +811,7 @@ body {
 
 @media(min-width: 550px) {
     .testimonial {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
 }
 
@@ -879,7 +893,7 @@ body {
 
 @media(min-width: 550px) {
     .contact {
-        padding: 2rem 2rem;
+        padding: 3rem 3rem;
     }
     .contact-button {
         width: 90%;
@@ -917,7 +931,7 @@ body {
 
 .footer-description {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
     margin-top: 5rem;
     padding: 0;
@@ -931,7 +945,7 @@ body {
 
 .footer-icon {
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0.7rem;
     margin: 2rem 0.5rem;
     background: black;
@@ -942,4 +956,13 @@ body {
 .footer-icon:hover {
     background: var(--light-green);
     color: white;
+}
+
+@media(min-width: 550px) {
+    .footer-description {
+        font-size: 1.2rem;
+    }
+    .footer-icon {
+        font-size: 1.5rem;
+    }
 }

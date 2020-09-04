@@ -4,11 +4,15 @@ let toggleButton = document.querySelector(".toggle-button");
 let navBar = document.querySelector(".main-nav__mobile");
 let desktopItems = document.querySelectorAll(".main-nav__item");
 let mobileItems = document.querySelectorAll(".main-nav__mobile-items");
+let questions = document.querySelectorAll(".question-item");
 
 function showHomeSlides(index = 0) {
     header.style.backgroundImage = headerSlides[index];
-    let nextIndex = index === 1 ? 0 : 1
-    setTimeout(() => showHomeSlides(nextIndex), 4000);
+    if (index === 1) {
+        setTimeout(() => showHomeSlides(0), 4000);
+    } else {
+        setTimeout(() => showHomeSlides(1), 4000);
+    }
 }
 
 function handleToggleButtonClick(e) {
@@ -29,9 +33,18 @@ function handleQuestionClick(e) {
         e.setAttribute("data-state", "0");
         p.classList.remove("answer-clicked");
     } else {
+        closeQuestions();
         e.setAttribute("data-state", "1");
         p.classList.add("answer-clicked");
     }
+}
+
+function closeQuestions() {
+    questions.forEach((question) => {
+        let p = question.querySelector(".question-answer");
+        question.setAttribute("data-state", "0");
+        p.classList.remove("answer-clicked");
+    });
 }
 
 function highlightItem(index) {
@@ -76,12 +89,10 @@ function hideMemberSocialMedia(e) {
     socialMediaBar.style.opacity = 0
 }
 
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
