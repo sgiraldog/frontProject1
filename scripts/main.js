@@ -1,5 +1,5 @@
 let header = document.querySelector(".main-banner");
-let headerSlides = ['url("./images/home-bg.jpg")', 'url("./images/home-bg-2.jpg")']
+let headerSlides = ['url("images/home-bg.jpg")', 'url("images/home-bg-2.jpg")']
 let toggleButton = document.querySelector(".toggle-button");
 let navBar = document.querySelector(".main-nav__mobile");
 let desktopItems = document.querySelectorAll(".main-nav__item");
