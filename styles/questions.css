@@ -49,17 +49,30 @@
 
 .answer-clicked {
     margin-top: 1rem;
-    height: 8rem;
+    height: 12rem;
 }
 
 @media(min-width: 550px) {
     .questions {
         padding: 3rem 3rem;
     }
+    .answer-clicked {
+        height: 10rem;
+    }
+}
+
+@media(min-width: 700px) {
+    .answer-clicked {
+        height: 8rem;
+    }
 }
 
 @media(min-width: 800px) {
     .questions {
         padding: 5rem 8rem;
+    }
+    .answer-clicked {
+        margin-top: 1rem;
+        height: 6rem;
     }
 }

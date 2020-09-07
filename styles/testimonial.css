@@ -19,7 +19,6 @@
     display: none;
     position: absolute;
     width: 100%;
-    opacity: 0;
 }
 
 .carousel-slide__visible {
@@ -94,6 +93,9 @@
 @media(min-width: 550px) {
     .testimonial {
         padding: 3rem 3rem;
+    }
+    .carousel-slide {
+        padding: 1rem;
     }
     .carousel-slide__mobile-visible {
         position: absolute;
