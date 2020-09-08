@@ -46,10 +46,13 @@
     justify-content: center;
     width: 100%;
     height: 4.5rem;
-    opacity: 0;
     background: var(--white90);
     transition: opacity 1.5s;
     bottom: 20%;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 .team__icon {
