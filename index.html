@@ -3,37 +3,395 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Project 1</title>
-    <link rel="stylesheet" href="main.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talos Digital</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/resources.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/team.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/blog.css">
+    <link rel="stylesheet" href="styles/questions.css">
+    <link rel="stylesheet" href="styles/testimonial.css">
+    <link rel="stylesheet" href="styles/contact.css">
 </head>
 
 <body>
-    <header>
-        <h1>Header</h1>
+    <div id="header" class="main-banner" onmouseover="highlightItem(0)" onmouseout="removeHighlightItem(0)">
+        <div class="main-banner__content">
+            <h1 class="main-banner__title">Genius Web & Talos Inc.</h1>
+            <p class="main-banner__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam lorem ipsum dolor sit amet.
+            </p>
+            <a class="main-banner_link main-banner__learn-more" href="#services">LEARN MORE</a>
+            <a class="main-banner_link main-banner__contact" href="#contact">CONTACT US</a>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="main-header__buttons">
+            <h2 class="main-header__title">Talos</h2>
+            <button class="toggle-button" data-state="1" onclick="handleToggleButtonClick(this)">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+            <nav class="main-nav">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#header">Home</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#services">Services</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#about">About</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#team">Team</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#portfolio">Portfolio</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#blog">Blog</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav-gray" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="main-nav__mobile nav-open">
+            <ul class="main-nav__mobile-items">
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#header">Home</a></li>
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#services">Services</a></li>
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#about">About</a></li>
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#team">Team</a></li>
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#portfolio">Portfolio</a></li>
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#blog">Blog</a></li>
+                <li class="main-nav__mobile-item"><a class="main-nav__link main-nav-gray" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
 
     <main>
+        <section id="services" class="services" onmouseover="highlightItem(1)" onmouseout="removeHighlightItem(1)">
+            <h2 class="section-title">What we do</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <ul class="services__list">
+                <li class="services__list-item">
+                    <div class="services__icon" aria-hidden="true" data-icon="&#xe001;"></div>
+                    <h3 class="service__title">Brand Identity</h3>
+                    <p class="service__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </li>
+                <li class="services__list-item">
+                    <div class="services__icon" aria-hidden="true" data-icon="&#xe01b;"></div>
+                    <h3 class="service__title">Web Design</h3>
+                    <p class="service__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore <span class="highlighted">et dolore magna aliqua.</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat.
+                    </p>
+                </li>
+                <li class="services__list-item">
+                    <div class=" services__icon" aria-hidden="true" data-icon="&#xe04b;"></div>
+                    <h3 class="service__title">Social Marketing</h3>
+                    <p class="service__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </li>
+                <li class="services__list-item">
+                    <div class=" services__icon" aria-hidden="true" data-icon="&#xe027;"></div>
+                    <h3 class="service__title">CMS & eCommerce</h3>
+                    <p class="service__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="about" class="about" onmouseover="highlightItem(2)" onmouseout="removeHighlightItem(2)">
+            <div class="about__content">
+                <h2 class="section-title">Genius Studio</h2>
+                <p class="section-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="section-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+
+            </div>
+            <video controls src="videos/sample-video.mp4">
+            </video>
+        </section>
+
+
+        <section id="team" class="team" onmouseover="highlightItem(3)" onmouseout="removeHighlightItem(3)">
+            <h2 class="section-title">Team Members</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <ul class="team__list">
+                <li class="team__member" onmouseover="showMemberSocialMedia(this)" onmouseout="hideMemberSocialMedia(this)">
+                    <div class="team__container">
+                        <img class="team__member-img" src="images/team_1.jpg">
+                        <div class="team__social-media hidden">
+                            <div class="icon-facebook team__icon"></div>
+                            <div class="icon-twitter team__icon"></div>
+                            <div class="icon-dribbble team__icon"></div>
+                            <div class="icon-behance team__icon"></div>
+                        </div>
+                        <h3 class="team__member-name">Johnathan Doe</h3>
+                        <p class="team__member-role">Designer</p>
+                    </div>
+
+                </li>
+                <li class="team__member" onmouseover="showMemberSocialMedia(this)" onmouseout="hideMemberSocialMedia(this)">
+                    <div class="team__container">
+                        <img class="team__member-img" src="images/team_2.jpg">
+                        <div class="team__social-media hidden">
+                            <div class="icon-facebook team__icon"></div>
+                            <div class="icon-twitter team__icon"></div>
+                            <div class="icon-dribbble team__icon"></div>
+                            <div class="icon-behance team__icon"></div>
+                        </div>
+                        <h3 class="team__member-name">Jenny L Martian</h3>
+                        <p class="team__member-role">UX Designer</p>
+                    </div>
+                </li>
+                <li class="team__member" onmouseover="showMemberSocialMedia(this)" onmouseout="hideMemberSocialMedia(this)">
+                    <div class="team__container">
+                        <img class="team__member-img" src="images/team_3.jpg">
+                        <div class="team__social-media hidden">
+                            <div class="icon-facebook team__icon"></div>
+                            <div class="icon-twitter team__icon"></div>
+                            <div class="icon-dribbble team__icon"></div>
+                            <div class="icon-behance team__icon"></div>
+                        </div>
+                        <h3 class="team__member-name">James David Doe</h3>
+                        <p class="team__member-role">Creative Director</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="portfolio" class="portfolio" onmouseover="highlightItem(4)" onmouseout="removeHighlightItem(4)">
+            <h2 class="section-title">Latest Work</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+
+            <ul class="portfolio__list">
+                <li class="portfolio__item" onmouseover="showPortfolioHover(this)" onmouseout="hidePortfolioHover(this)">
+                    <div class="portfolio__hover">
+                        <div class=" services__icon portfolio__hover-icon" aria-hidden="true" data-icon="&#xe02e;"></div>
+                        <h3 class="portfolio__hover-text">Illustration</h3>
+                        <h3 class="portfolio__hover-text">Graphic / Illustration / Poster</h3>
+                    </div>
+                    <img class="portfolio__item-img" src="images/portfolio-img1.jpg" />
+                </li>
+                <li class="portfolio__item" onmouseover="showPortfolioHover(this)" onmouseout="hidePortfolioHover(this)">
+                    <div class="portfolio__hover">
+                        <div class=" services__icon portfolio__hover-icon" aria-hidden="true" data-icon="&#xe02e;"></div>
+                        <h3 class="portfolio__hover-text">Illustration</h3>
+                        <h3 class="portfolio__hover-text">Graphic / Illustration / Poster</h3>
+                    </div>
+                    <img class="portfolio__item-img" src="images/portfolio-img2.jpg" />
+                </li>
+                <li class="portfolio__item" onmouseover="showPortfolioHover(this)" onmouseout="hidePortfolioHover(this)">
+                    <div class="portfolio__hover">
+                        <div class=" services__icon portfolio__hover-icon" aria-hidden="true" data-icon="&#xe02e;"></div>
+                        <h3 class="portfolio__hover-text">Illustration</h3>
+                        <h3 class="portfolio__hover-text">Graphic / Illustration / Poster</h3>
+                    </div>
+                    <img class="portfolio__item-img" src="images/portfolio-img3.jpg" />
+                </li>
+                <li class="portfolio__item" onmouseover="showPortfolioHover(this)" onmouseout="hidePortfolioHover(this)">
+                    <div class="portfolio__hover">
+                        <div class=" services__icon portfolio__hover-icon" aria-hidden="true" data-icon="&#xe02e;"></div>
+                        <h3 class="portfolio__hover-text">Illustration</h3>
+                        <h3 class="portfolio__hover-text">Graphic / Illustration / Poster</h3>
+                    </div>
+                    <img class="portfolio__item-img" src="images/portfolio-img4.jpg" />
+                </li>
+                <li class="portfolio__item" onmouseover="showPortfolioHover(this)" onmouseout="hidePortfolioHover(this)">
+                    <div class="portfolio__hover">
+                        <div class=" services__icon portfolio__hover-icon" aria-hidden="true" data-icon="&#xe02e;"></div>
+                        <h3 class="portfolio__hover-text">Illustration</h3>
+                        <h3 class="portfolio__hover-text">Graphic / Illustration / Poster</h3>
+                    </div>
+                    <img class="portfolio__item-img" src="images/portfolio-img5.jpg" />
+                </li>
+                <li class="portfolio__item" onmouseover="showPortfolioHover(this)" onmouseout="hidePortfolioHover(this)">
+                    <div class="portfolio__hover">
+                        <div class=" services__icon portfolio__hover-icon" aria-hidden="true" data-icon="&#xe02e;"></div>
+                        <h3 class="portfolio__hover-text">Illustration</h3>
+                        <h3 class="portfolio__hover-text">Graphic / Illustration / Poster</h3>
+                    </div>
+                    <img class="portfolio__item-img" src="images/portfolio-img6.jpg" />
+                </li>
+            </ul>
+        </section>
+
+        <section id="blog" class="blog" onmouseover="highlightItem(5)" onmouseout="removeHighlightItem(5)">
+            <h2 class="section-title">Our Blog</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+
+            <ul class="blog__list">
+                <li class="blog__item expanded">
+                    <h3 class="blog__item-date">Online Business / Dec 9, 2016</h3>
+                    <h3 class="blog__item-title">The Best Way to make Online Business</h3>
+                    <h3 class="blog__item-author">By Johnathan Doe</h3>
+                </li>
+                <li class="blog__item expanded">
+                    <h3 class="blog__item-date">Online Business / Dec 9, 2016</h3>
+                    <h3 class="blog__item-title">The Best Way to make Online Business</h3>
+                    <h3 class="blog__item-author">By Johnathan Doe</h3>
+                </li>
+                <li class="blog__item">
+                    <h3 class="blog__item-date">Online Business / Dec 9, 2016</h3>
+                    <h3 class="blog__item-title">The Best Way to make Online Business</h3>
+                    <h3 class="blog__item-author">By Johnathan Doe</h3>
+                </li>
+                <li class="blog__item">
+                    <h3 class="blog__item-date">Online Business / Dec 9, 2016</h3>
+                    <h3 class="blog__item-title">The Best Way to make Online Business</h3>
+                    <h3 class="blog__item-author">By Johnathan Doe</h3>
+                </li>
+            </ul>
+        </section>
+
+        <section id="questions" class="questions">
+            <h2 class="section-title">Asked Questions</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <ul class="questions-list">
+                <li class="question-item" data-state="1" onclick="handleQuestionClick(this)">
+                    <h3 class="question-title">
+                        <span class="services__icon" aria-hidden="true" data-icon="&#xe001;"></span> How to make Brand Identity?
+                    </h3>
+                    <p class="question-answer answer-clicked">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.<br><br>Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.
+                    </p>
+                </li>
+                <li class="question-item" data-state="0" onclick="handleQuestionClick(this)">
+                    <h3 class="question-title">
+                        <span class=" services__icon" aria-hidden="true" data-icon="&#xe01b;"></span> How to make Brand Identity?
+                    </h3>
+                    <p class="question-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. <br><br>Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.
+                    </p>
+                </li>
+                <li class="question-item" data-state="0" onclick="handleQuestionClick(this)">
+                    <h3 class="question-title">
+                        <span class=" services__icon" aria-hidden="true" data-icon="&#xe04b;"></span> How to make Brand Identity?
+                    </h3>
+                    <p class="question-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. <br><br>Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="testimonial" class="testimonial">
+            <h2 class="section-title">Testimonial Words</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <div class="carousel">
+                <div class="carousel-slide carousel-slide__mobile-visible carousel-slide__visible">
+                    <img class="testimonial-image" src="images/testimonial-img1.jpg" alt="Testimonial-1">
+                    <div class="testimonial-description">
+                        <p class="testimonial__description-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                        <h3 class="testimonial__description-author">Amy Smith</h3>
+                    </div>
+                </div>
+                <div class="carousel-slide carousel-slide__visible">
+                    <img class="testimonial-image" src="images/testimonial-img2.jpg" alt="Testimonial-2">
+                    <div class="testimonial-description">
+                        <p class="testimonial__description-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                        <h3 class="testimonial__description-author">Johnathan Doe</h3>
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img class="testimonial-image" src="images/testimonial-img3.jpg" alt="Testimonial-1">
+                    <div class="testimonial-description">
+                        <p class="testimonial__description-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                        <h3 class="testimonial__description-author">Eduardo</h3>
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img class="testimonial-image" src="images/testimonial-img1.jpg" alt="Testimonial-1">
+                    <div class="testimonial-description">
+                        <p class="testimonial__description-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                        <h3 class="testimonial__description-author">Jonhy David</h3>
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img class="testimonial-image" src="images/testimonial-img2.jpg" alt="Testimonial-1">
+                    <div class="testimonial-description">
+                        <p class="testimonial__description-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                        <h3 class="testimonial__description-author">James Author</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel__dots">
+                <span class="dot active" onclick="currentSlides(0,0)"></span>
+                <span class="dot" onclick="currentSlides(2,1)"></span>
+                <span class="dot" onclick=" currentSlides(4,2) "></span>
+            </div>
+            <div class="carousel__mobile-dots">
+                <span class="mobile-dot active" onclick="currentMobileSlide(0)"></span>
+                <span class="mobile-dot" onclick="currentMobileSlide(1)"></span>
+                <span class="mobile-dot" onclick=" currentMobileSlide(2) "></span>
+                <span class="mobile-dot" onclick="currentMobileSlide(3) "></span>
+                <span class="mobile-dot" onclick="currentMobileSlide(4) "></span>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" onmouseover="highlightItem(6)" onmouseout="removeHighlightItem(6)">
+            <h2 class="section-title ">Get In Touch</h2>
+            <p class="section-description ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+
+            <form class="contact-form " action="submit ">
+                <input class="contact-input" type="text " name="name " id="contact__name " placeholder="Name ">
+                <input class="contact-input" type="email " name="email " id="contact__email " placeholder="Email ">
+                <input class="contact-input" type="tel " pattern="[+]{1}[0-9]{11,14} " name="name " id="contact__phone " placeholder="Phone ">
+                <textarea class="contact-textarea" name="message " id="contact__message " rows="10 " placeholder="Message "></textarea>
+            </form>
+            <button class="contact-button " type="submit " value="submit ">SHOOT MESSAGE</button>
+        </section>
 
     </main>
-
-
-
-    <footer>
-        <p>Talos Footer</p>
+    <footer class="main-footer ">
+        <h2 class="footer-description">Copyright © Talos Inc HTML Template | All Rights Reserved.</h2>
+        <ul class="footer-list">
+            <li class="footer-icon icon-facebook "></li>
+            <li class="footer-icon icon-twitter "></li>
+            <li class="footer-icon icon-dribbble "></li>
+            <li class="footer-icon icon-behance "></li>
+            <li class="footer-icon icon-github "></li>
+            <li class="footer-icon icon-google-plus "></li>
+        </ul>
     </footer>
-
+    <script src="scripts/main.js "></script>
 </body>
 
 </html>
